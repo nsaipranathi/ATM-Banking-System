@@ -135,8 +135,9 @@ if uploaded_file is not None:
     st.subheader("Feature Importance")
     st.write(feature_importance)
 
-
-
+    fig1, ax1 = plt.subplots(figsize=(8, 6))
+    ax1.barh(feature_importance['Feature'], feature_importance['Importance'])
+    ax1.set_xlabel("Importance")
     ax1.set_title("Feature Importance - Random Forest")
 
     st.pyplot(fig1)
