@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-import seaborn as sns
 
 
 try:
@@ -104,18 +103,4 @@ if uploaded_file is not None:
     st.write(accuracy)
 
     # Confusion Matrix
-    cm = confusion_matrix(y_test, y_pred)
-
-    st.subheader("Confusion Matrix")
-
-    fig, ax = plt.subplots()
-
-    sns.heatmap(
-        cm,
-        annot=True,
-        fmt='d',
-        cmap='Blues',
-        ax=ax
-    )
-
-    st.pyplot(fig)
+   
